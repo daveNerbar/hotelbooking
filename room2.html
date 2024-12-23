@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Suite</title>
+    <link rel="stylesheet" href="rooms.css">
+    <script src="main.js"></script>
+    <script> 
+    // Function to load the navigation bar dynamically
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("Nav_bar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+                updateLoginStatus(); // Ensure login status logic runs after navbar is loaded
+            })
+            .catch(error => console.error("Error loading navigation bar:", error));
+        });
+
+    </script>
+ 
+</head>
+
+<body class="rooms">
+
+    <!-- Placeholder for Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+
+    <h1 style="margin-top: 180px;">Family Suite</h1>
+
+    <img src="family.jpg" alt="Deluxe Room" class="room-image">
+    <div class="book-now-container">
+        <a href="booking.html" class="book-now-btn">Book Now</a>
+    </div>
+    <div class="roompackage">
+        <h2>Packages</h2>
+        <ul>
+            <li><strong>Standard Family Suite:</strong> Includes basic amenities like comfortable bedding, en-suite
+                bathroom, Wi-Fi, and a flat-screen TV. Might offer additional features like a mini-fridge or a small seating
+                area.</li>
+            <li><strong>Family Suite with Breakfast:</strong> Includes the standard amenities plus a complimentary
+                breakfast, usually a buffet or à la carte menu.</li>
+            <li><strong>Family Suite with Dinner:</strong> Includes the standard amenities plus a complimentary dinner,
+                often a set menu or a credit towards the restaurant.</li>
+        </ul>
+
+        <h2>Perks</h2>
+        <ul>
+            <li>Complimentary Wi-Fi</li>
+            <li>Flat-screen TV</li>
+            <li>En-suite Bathroom</li>
+            <li>Comfortable Bedding</li>
+            <li>Mini-Fridge</li>
+            <li>Seating Area</li>
+            <li>Breakfast</li>
+            <li>Dinner</li>
+            <li>Spa Access</li>
+            <li>Late Checkout</li>
+            <li>Early Check-in</li>
+        </ul>
+    </div>
+
+    <p>
+        <strong>Note:</strong> The specific packages and perks offered can vary depending on the hotel and the location.
+        It's always best to check directly with the hotel for the most accurate information.
+    </p>
+
+    <h2>Additional Tips</h2>
+    <div class="tips-container">
+        <div class="tip-card">
+            <h3>Book in Advance</h3>
+            <p>Secure your room at the best rates by planning early.</p>
+        </div>
+        <div class="tip-card">
+            <h3>Check for Promotions</h3>
+            <p>Look for special deals and discount packages.</p>
+        </div>
+        <div class="tip-card">
+            <h3>Read Reviews</h3>
+            <p>Know what to expect by checking reviews from other guests.</p>
+        </div>
+        <div class="tip-card">
+            <h3>Ask Questions</h3>
+            <p>Contact the hotel for additional details or requests.</p>
+        </div>
+    </div>
+</body>
+
+</html>

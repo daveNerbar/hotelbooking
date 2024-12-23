@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Suite Rooms</title>
+    <link rel="stylesheet" href="rooms.css">
+    <script src="main.js"></script>
+    <script> 
+    // Function to load the navigation bar dynamically
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("Nav_bar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+                updateLoginStatus(); // Ensure login status logic runs after navbar is loaded
+            })
+            .catch(error => console.error("Error loading navigation bar:", error));
+        });
+
+    </script>
+</head>
+
+<body class="rooms">
+
+    <!-- Placeholder for Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+
+
+    <h1 style="margin-top: 180px;">Luxury Suite Rooms</h1>
+
+    <img src="luxury.jpg" alt="Luxury Suite Room" class="room-image">
+
+    <div class="book-now-container">
+        <a href="booking.html" class="book-now-btn">Book Now</a>
+    </div>
+    <div class="roompackage">
+    <h2>Packages</h2>
+    <ul>
+        <li><strong>Luxury Suite Standard:</strong> A spacious suite with premium bedding, en-suite marble bathroom,
+            Wi-Fi, smart flat-screen TV, and elegant interiors.</li>
+        <li><strong>Luxury Suite with Spa Access:</strong> Includes all standard amenities plus complimentary access to
+            the wellness spa for a rejuvenating experience.</li>
+        <li><strong>Luxury Suite with Dining Experience:</strong> Includes all standard amenities plus a gourmet dining
+            experience, featuring multi-course meals and chef specials.</li>
+        <li><strong>Luxury Suite with Private Lounge Access:</strong> Includes exclusive access to the hotel’s private
+            lounge with complimentary snacks, drinks, and personalized services.</li>
+    </ul>
+
+    <h2>Common Perks</h2>
+    <ul>
+        <li>Premium Complimentary Wi-Fi</li>
+        <li>Smart Flat-screen TV</li>
+        <li>En-suite Marble Bathroom</li>
+        <li>Luxury Bedding and Pillows</li>
+        <li>Mini-Bar and Coffee Station</li>
+        <li>Private Balcony with Scenic Views</li>
+        <li>Complimentary Breakfast</li>
+        <li>Late Checkout</li>
+        <li>Early Check-in</li>
+        <li>Personalized Room Service</li>
+    </ul>
+    </div>
+
+    <p>
+        <strong>Note:</strong> Package details and perks may vary depending on the property and location. Please confirm
+        availability and offers with the hotel directly for the most accurate information.
+    </p>
+
+    <h2>Additional Tips</h2>
+    <div class="tips-container">
+        <div class="tip-card">
+            <h3>Book Early</h3>
+            <p>Reserve your luxury suite in advance for the best availability and prices.</p>
+        </div>
+        <div class="tip-card">
+            <h3>Request Upgrades</h3>
+            <p>Check for complimentary upgrades for special occasions.</p>
+        </div>
+        <div class="tip-card">
+            <h3>Check for Spa Packages</h3>
+            <p>Many luxury suites include discounts on spa treatments.</p>
+        </div>
+        <div class="tip-card">
+            <h3>Explore Loyalty Programs</h3>
+            <p>Earn rewards and exclusive benefits through hotel loyalty programs.</p>
+        </div>
+    </div>
+</body>
+
+</html>

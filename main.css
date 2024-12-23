@@ -1,0 +1,379 @@
+/* Global Styles */
+:root {
+  --primary-color: rgb(8, 24, 66);
+  --secondary-color: #f6ac0f;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --extra-light: #f8fafc;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Playfair Display", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.quote {
+  position: relative;
+  width: 50%;
+  height: 60%;
+  top: 70px;
+  left: 20px;
+  right: 30px;
+  padding: 40px;
+  background-color: #00000050;
+  color: #f8fafc;
+}
+
+.quote h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 85px;
+  margin: 50px;
+}
+
+.quote h1 {
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.quote a {
+  position: absolute;
+  margin: 30px 0 0 30px;
+  background: #e2e2e2;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 25px;
+  color: #000000;
+}
+
+
+body {
+  font-family: var(--header-font);
+}
+
+.slideshow {
+  width: 95%;
+
+  animation: backgroundSlideshow 10s infinite ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px 50px 0 50px;
+}
+
+@keyframes backgroundSlideshow {
+  0% {
+    background-image: url("room.jpg");
+  }
+
+  33% {
+    background-image: url("park.jpg");
+  }
+
+  66% {
+    background-image: url("park1.jpg");
+  }
+
+  100% {
+    background-image: url("room.jpg");
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 2px;
+}
+
+.logo div {
+  padding-inline: 12px;
+  font-size: 3em;
+  color: hsl(51, 84%, 52%);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+
+.nav__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed; /* Fixes the bar in place */
+  top: 0; /* Aligns it to the top of the viewport */
+  left: 0; /* Ensures it starts at the left edge */
+  right: 0; /* Ensures it spans the full width */
+  background-color: #fff; /* Ensures a solid background */
+  z-index: 1000; /* Places it above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+}
+
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 5px;
+
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: color 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  nav {
+    position: static;
+    padding-inline: 1rem;
+    background-color: rgb(8, 24, 66);
+  }
+
+  .nav__bar {
+    
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: 5px;
+    transform: translateY(50%);
+  }
+
+  .nav__header {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    width: fit-content;
+    padding: 0;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    background-color: transparent;
+  }
+
+  .booking__container form {
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  .about::before {
+    height: 75%;
+    width: 75%;
+  }
+
+  .slideshow {
+    height: 80vh;
+  }
+}
+
+
+.blue {
+  margin-top: 10px;
+  height: 80px;
+  background: var(--primary-color);
+
+}
+
+.about p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 250px 200px 200px 200px;
+  font-size: 18px;
+  background: #c0c0c0;
+  padding: 5%;
+  box-shadow: 1px 1px 15px 10px rgba(0, 0, 0, 0.158);
+  border-radius: 10px;
+}
+
+h3 {
+  margin-top: 10%;
+  margin-bottom: 6%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 70px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20%;
+}
+
+.room {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 600px;
+  height: 300px;
+}
+
+.room img {
+  width: 100%;
+  height: auto;
+}
+
+.room h2 {
+  margin-top: 10px;
+}
+
+.room p {
+  margin: 5px 0;
+}
+
+
+
+/* Hover effect */
+.room:hover {
+  filter: grayscale(100%);
+  transform: scale(1.01);
+}
+
+
+
+.album-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15%;
+}
+
+.album-wrapper {
+  display: flex;
+  width: calc(500px * 8);
+  animation: scroll 15s linear infinite;
+}
+
+.album {
+  flex: 0 0 500px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.album:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.album1 {
+  background-image: url('food1.jpg');
+}
+
+.album2 {
+  background-image: url('food2.jpg');
+}
+
+.album3 {
+  background-image: url('food3.jpg');
+}
+
+.album4 {
+  background-image: url('food4.jpg');
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.contacts {
+ 
+  background-color: rgb(8, 24, 66);
+  color: #fff;
+  padding: 100px 10px;
+  text-align: center;
+}
+
+.contacts a {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.contacts a:hover {
+  opacity: 0.7;
+}
+
+.contacts a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  filter: brightness(0);
+}
+
+.contacts p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Email Link */
+.contacts a.email-link {
+  color: #00aced;
+  /* Light Blue */
+  text-decoration: none;
+}
+
+.contacts a.email-link:hover {
+  text-decoration: underline;
+}

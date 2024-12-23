@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Miranda</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script>
+        // Function to load the navigation bar dynamically
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("Nav_bar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-placeholder").innerHTML = data;
+                    updateLoginStatus(); // Ensure login status logic runs after navbar is loaded
+                })
+                .catch(error => console.error("Error loading navigation bar:", error));
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- Placeholder for Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Content -->
+    <section id="home">
+        <div class="slideshow">
+            <div class="quote">
+                <h1>The Perfect Base For You</h1>
+                <a href="#rooms">Book now</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="blue"></div>
+    <section id="aboutus">
+        <div class="about">
+            <p>Welcome to [Your Hotel Booking Website Name], your ultimate gateway to unforgettable travel experiences!
+                At [Your Company Name], we believe that every journey begins with the perfect stay.
+                Our platform connects travelers to a world of comfort, offering handpicked hotels, resorts, and stays
+                tailored to fit every budget and style.
+                Whether you’re seeking luxury suites, cozy boutique accommodations, or budget-friendly rooms,
+                we make finding and booking your dream stay effortless.</p>
+        </div>
+    </section>
+
+    <div class="album-container">
+        <div class="album-wrapper">
+            <div class="album album1"></div>
+            <div class="album album2"></div>
+            <div class="album album3"></div>
+            <div class="album album4"></div>
+            <div class="album album1"></div>
+            <div class="album album2"></div>
+            <div class="album album3"></div>
+            <div class="album album4"></div>
+        </div>
+    </div>
+
+    <section id="rooms">
+        <h3>Rooms</h3>
+        <div class="container">
+            <div class="room">
+                <a href="room1.html"><img src="deluxe.jpg" alt="Deluxe Suite"></a>
+                <h2>Deluxe Suite</h2>
+                <p>Well-appointed rooms designed for guests who desire a more</p>
+                <p>$399/night</p>
+            </div>
+
+            <div class="room">
+                <a href="room2.html"><img src="family.jpg" alt="Family Suite"></a>
+                <h2>Family Suite</h2>
+                <p>Consists of multiple rooms and a common living area.</p>
+                <p>$599/night</p>
+            </div>
+
+            <div class="room">
+                <a href="room3.html"><img src="luxury.jpg" alt="Luxury Penthouse"></a>
+                <h2>Luxury Penthouse</h2>
+                <p>Top-tier accommodations usually on the highest floors of a hotel.</p>
+                <p>$799/night</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <div class="contacts">
+            <a href="https://facebook.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">Facebook
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">Instagram
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">Twitter
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="YouTube">YouTube
+            </a>
+            <p>One Rizal Park, Ermita, Manila, 0913 Metro Manila</p>
+            <p>+63 2 8527 0011 | +63 2 5301 5500</p>
+            <p><a href="mailto:info@themanilahotel.com" class="email-link">info@themanilahotel.com</a></p>
+        </div>
+    </section>
+</body>
+
+</html>
