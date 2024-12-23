@@ -33,7 +33,7 @@
                     updateLoginStatus(); // Refresh the menu
                 });
             } else {
-                loginLink.innerHTML = `<a href="login.html">Log in</a>`;
+                loginLink.innerHTML = `<a href="index.html">Log in</a>`;
             }
         }
  
